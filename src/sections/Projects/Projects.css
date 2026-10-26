@@ -188,6 +188,7 @@
 }
 
 .project-view-link span {
+  color: #ffffff;
   transition: transform 0.2s ease;
 }
 
