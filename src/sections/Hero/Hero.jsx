@@ -9,7 +9,6 @@ function Hero() {
           <div className="hero-ring hero-ring-outer" />
           <div className="hero-ring hero-ring-inner" />
 
-          <span className="hero-spark hero-spark-one">✳</span>
           <span className="hero-spark hero-spark-two">✦</span>
           <span className="hero-dot hero-dot-one" />
           <span className="hero-dot hero-dot-two" />

@@ -135,7 +135,7 @@ function Projects() {
                 </div>
 
                 <span className="project-view-link">
-                  View project <span aria-hidden="true">↗</span>
+                  View project 
                 </span>
               </div>
             </button>
