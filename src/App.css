@@ -1,0 +1,54 @@
+/* Section Divider */
+.section-divider {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+  margin: 0 auto;
+  background: #3a3a3a;
+}
+
+/* Monochrome Galaxy Background */
+#root {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+}
+
+.galaxy-background {
+  position: fixed;
+  inset: -2%;
+  z-index: -1;
+  pointer-events: none;
+
+  background-color: #080808;
+  background-image: url('/images/Background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  animation: wave-drift 12s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Keep Content Above Background */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes wave-drift {
+  from {
+    transform: translate3d(-0.5%, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(0.5%, -1%, 0) scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galaxy-background {
+    animation: none;
+  }
+}

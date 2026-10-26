@@ -1,0 +1,25 @@
+
+:root {
+  color-scheme: dark;
+
+  --bg-primary: #0b0b0b;
+  --bg-secondary: #111111;
+  --bg-tertiary: #171717;
+
+  --text-primary: #ededed;
+  --text-secondary: #999999;
+  --text-muted: #6f6f6f;
+
+  --border-color: #292929;
+  --border-hover: #444444;
+
+  --content-width: 1040px;
+
+  --font-family: 'DM Sans', sans-serif;
+
+  --transition-fast: 180ms ease;
+  --transition-normal: 280ms ease;
+
+  --radius-small: 6px;
+  --radius-medium: 12px;
+}

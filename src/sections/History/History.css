@@ -1,0 +1,326 @@
+/* History Section */
+.history-section {
+  overflow: hidden;
+  padding: 100px 5%;
+  background: transparent;
+  color: #ffffff;
+}
+
+.history-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.history-title {
+  margin: 0;
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Timeline Layout */
+.history-timeline {
+  position: relative;
+  margin-top: 64px;
+}
+
+.history-side {
+  position: absolute;
+  left: 0;
+  width: 190px;
+}
+
+.history-work-side {
+  top: 38%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 190px;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+/* Sidebar Icons and Labels */
+.history-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  border: 5px solid #555555;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #171717, #090909);
+  color: #ffffff;
+  box-shadow: 0 0 24px rgb(255 255 255 / 4%);
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.history-side h3 {
+  max-width: 170px;
+  margin: 16px 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Work Experience Timeline */
+.history-items {
+  position: relative;
+  margin-left: 220px;
+  padding-left: 34px;
+}
+
+.history-items::before {
+  position: absolute;
+  top: 32px;
+  bottom: 32px;
+  left: 0;
+  width: 1px;
+  background: #0a0a0a;
+  content: "";
+}
+
+/* Experience and Education Cards */
+.history-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 26px;
+  padding: 25px 28px;
+  border: 3px solid #454545;
+  border-radius: 15px;
+  background: #0a0a0a;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.history-card:hover {
+  transform: translateX(4px);
+  border-color: #ffffff;
+  background: #101010;
+}
+
+/* Work Experience Timeline Dots */
+.history-timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: -42px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #bcbcbc;
+  border-radius: 50%;
+  background: #eeeeee;
+  box-shadow: 0 0 12px rgb(255 255 255 / 15%);
+  transform: translateY(-50%);
+}
+
+/* Company Logo and Job Information */
+.history-card-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  flex-wrap: nowrap;
+}
+
+.history-company-logo {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  object-position: center;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.history-job-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-card h4 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Company and Date Information */
+.history-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  color: #bdbdbd;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.history-company {
+  color: #eeeeee;
+  font-weight: 600;
+}
+
+.history-date {
+  padding-left: 14px;
+  border-left: 1px solid #555555;
+  color: #c5c5c5;
+  font-weight: 500;
+}
+
+/* Experience Description */
+.history-description {
+  margin: 0;
+  padding-left: 28px;
+  border-left: 1px solid #444444;
+  color: #c5c5c5;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Work Experience Hover Effects */
+.history-timeline:has(.history-items .history-card:hover)
+  .history-work-side .history-icon {
+  transform: scale(1.04);
+  border-color: #eeeeee;
+  background: linear-gradient(145deg, #292929, #101010);
+  box-shadow: 0 0 22px rgb(255 255 255 / 12%);
+}
+
+.history-timeline:has(.history-items .history-card:hover)
+  .history-work-side h3 {
+  transform: scale(1.04);
+  color: #ffffff;
+  text-shadow: 0 0 12px rgb(255 255 255 / 35%);
+}
+
+/* Education Layout */
+.history-education {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  align-items: center;
+  gap: 34px;
+  margin-top: 64px;
+}
+
+.history-education-side {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  text-align: center;
+}
+
+.history-education-side h3 {
+  max-width: 170px;
+}
+
+.history-education-card {
+  position: relative;
+  margin: 0;
+}
+
+.history-education-card::before,
+.history-education::before {
+  content: none;
+}
+
+.history-education-card .history-education-dot,
+.history-education-card .history-timeline-dot {
+  display: none;
+}
+
+/* Education Hover Effects */
+.history-education:has(.history-education-card:hover)
+  .history-education-side .history-icon {
+  transform: scale(1.04);
+  border-color: #eeeeee;
+  background: linear-gradient(145deg, #292929, #101010);
+  box-shadow: 0 0 22px rgb(255 255 255 / 12%);
+}
+
+.history-education:has(.history-education-card:hover)
+  .history-education-side h3 {
+  transform: scale(1.04);
+  color: #ffffff;
+  text-shadow: 0 0 12px rgb(255 255 255 / 35%);
+}
+
+/* History Title Hover Effect */
+.history-container:has(.history-card:hover) .history-title {
+  transform: scale(1.02);
+  color: #ffffff;
+  text-shadow: 0 0 16px rgb(255 255 255 / 30%);
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .history-education {
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .history-education-side {
+    width: 150px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .history-education {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 42px;
+  }
+
+  .history-education-side {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 14px;
+    width: auto;
+    text-align: left;
+  }
+
+  .history-education-side h3 {
+    max-width: none;
+  }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .history-card,
+  .history-icon,
+  .history-side h3,
+  .history-title {
+    transition: none;
+  }
+}
+
+.history-title span {
+  color: #888;
+}
