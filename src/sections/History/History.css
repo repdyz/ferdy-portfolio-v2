@@ -142,13 +142,12 @@
 }
 
 .history-company-logo {
-  flex: 0 0 64px;
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
-  object-position: center;
-  padding: 4px;
-  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 6px;
+  background: #fff;
 }
 
 .history-job-details {

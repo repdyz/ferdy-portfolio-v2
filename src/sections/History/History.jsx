@@ -1,17 +1,17 @@
 import "./History.css";
 import equnixLogo from "../../assets/equnixLogo2 (1).png";
-import uswahLogo from "../../assets/uswah.png";
+import uswahLogo from "../../assets/logoUswahBaru (1).png";
 import vascommLogo from "../../assets/vascomLogoOnly (2).png";
-import universityLogo from "../../assets/uaiLogo.png";
+import universityLogo from "../../assets/uaiLogoBaru (1).png";
 
 const workExperiences = [
   {
     role: "Application Support (Contract)",
     company: "PT. Vascomm Solusi Teknologi",
-    date: "Nov 2025 – Nov 2026",
+    date: "Nov 2026 – Nov 2027",
     logo: vascommLogo,
     description:
-      "Monitored server and PostgreSQL performance, handled Linux and database operations, performed initial troubleshooting, monitored replication and backup processes, and supported incident resolution in a 24/7 operational environment.",
+      "Handle support tickets, respond to user requests, and coordinate with relevant technical teams to ensure timely issue resolution and service continuity.",
   },
   {
     role: "Support Engineer (Contract)",
