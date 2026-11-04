@@ -1,10 +1,18 @@
 import "./History.css";
-import equnixLogo from "../../assets/logoELU.png";
+import equnixLogo from "../../assets/equnixLogo2 (1).png";
 import uswahLogo from "../../assets/uswah.png";
-import ppiLogo from "../../assets/logoPPI.png";
+import vascommLogo from "../../assets/vascomLogoOnly (2).png";
 import universityLogo from "../../assets/uaiLogo.png";
 
 const workExperiences = [
+  {
+    role: "Application Support (Contract)",
+    company: "PT. Vascomm Solusi Teknologi",
+    date: "Nov 2025 – Nov 2026",
+    logo: vascommLogo,
+    description:
+      "Monitored server and PostgreSQL performance, handled Linux and database operations, performed initial troubleshooting, monitored replication and backup processes, and supported incident resolution in a 24/7 operational environment.",
+  },
   {
     role: "Support Engineer (Contract)",
     company: "PT. Equnix Layanan Unggul",
@@ -20,14 +28,6 @@ const workExperiences = [
     logo: uswahLogo,
     description:
       "Designed and configured a Moodle-based e-learning platform, including data migration, plugin installation, and uploading mid-term examination questions.",
-  },
-  {
-    role: "IT Support (Internship)",
-    company: "PT. Perusahaan Perdagangan Indonesia",
-    date: "Sep 2023 - Dec 2023",
-    logo: ppiLogo,
-    description:
-      "Provided technical support for computer and network issues, configured internet connections and user accounts, and assisted with IT asset management, data backups, and system updates.",
   },
 ];
 
