@@ -1,8 +1,8 @@
-/* Projects Section */
 .projects-section {
-  overflow: hidden;
   width: 100%;
   padding: 100px 5%;
+  overflow: hidden;
+  box-sizing: border-box;
   background: transparent;
   color: #ffffff;
 }
@@ -14,6 +14,7 @@
 }
 
 /* Section Title */
+
 .projects-title {
   margin: 0 0 20px;
   font-size: 55px;
@@ -29,22 +30,42 @@
   color: #888888;
 }
 
-/* Project Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: stretch;
+/* ==============================
+   Carousel
+============================== */
+
+.projects-viewport {
+  width: 100%;
+  overflow: hidden;
+  touch-action: pan-y;
 }
 
-/* Project Card */
+.projects-track {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.projects-track.is-jumping {
+  transition: none;
+}
+
+/* ==============================
+   Project Card
+============================== */
+
 .project-card {
   display: flex;
+  flex: 0 0 calc((100% - 48px) / 3);
   flex-direction: column;
   min-width: 0;
   padding: 0;
   overflow: hidden;
-  border: 4px solid #353535;
+  box-sizing: border-box;
+  border: 3px solid #353535;
   border-radius: 15px;
   background: #101010;
   color: #ffffff;
@@ -69,8 +90,8 @@
 }
 
 /* Project Image */
+
 .project-card-image {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,6 +106,7 @@
   width: 100%;
   height: 100%;
   padding: 12px;
+  box-sizing: border-box;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -100,6 +122,7 @@
   width: 100%;
   height: 100%;
   padding: 20px;
+  box-sizing: border-box;
   background:
     radial-gradient(
       circle at top right,
@@ -113,12 +136,15 @@
 }
 
 /* Project Content */
+
 .project-card-content {
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   padding: 25px 28px;
+  box-sizing: border-box;
 }
 
 .project-category {
@@ -139,7 +165,6 @@
 
 .project-description {
   display: -webkit-box;
-  height: 70px;
   min-height: 70px;
   margin: 12px 0 18px;
   overflow: hidden;
@@ -153,14 +178,14 @@
   text-align: justify;
 }
 
-/* Technologies */
+/* Technology Tags */
+
 .project-technologies {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   gap: 8px;
   width: 100%;
-  margin-top: 0;
 }
 
 .project-technologies span {
@@ -175,11 +200,11 @@
   white-space: nowrap;
 }
 
-/* View Project Link */
+/* View Project */
+
 .project-view-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   margin-top: auto;
   padding-top: 22px;
   color: #ffffff;
@@ -187,24 +212,108 @@
   font-weight: 600;
 }
 
-.project-view-link span {
+/* Carousel Navigation */
+
+.projects-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.projects-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  border: 1px solid #353535;
+  border-radius: 10px;
+  background: rgb(15 15 15 / 85%);
+  color: #a0a0a0;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1px;
+}
+
+.projects-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #454545;
+  border-radius: 50%;
+  background: #111111;
   color: #ffffff;
-  transition: transform 0.2s ease;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.project-card:hover .project-view-link span {
-  transform: translate(3px, -3px);
+.projects-arrow span {
+  font-size: 22px;
+  line-height: 1;
 }
 
-/* Tablet */
+.projects-arrow:hover:not(:disabled) {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #111111;
+  transform: scale(1.06);
+}
+
+.projects-arrow:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.projects-arrow:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.projects-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Title Hover Effect */
+
+.projects-container:has(.project-card:hover) .projects-title {
+  transform: scale(1.02);
+  color: #ffffff;
+  text-shadow: 0 0 16px rgb(255 255 255 / 30%);
+}
+
+/* ==============================
+   Tablet
+============================== */
+
 @media (max-width: 950px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .projects-track {
     gap: 20px;
+  }
+
+  .project-card {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+
+  .project-card-content {
+    padding: 24px 20px;
   }
 }
 
-/* Mobile */
+/* ==============================
+   Mobile
+============================== */
+
 @media (max-width: 650px) {
   .projects-section {
     padding: 72px 5%;
@@ -215,49 +324,54 @@
     letter-spacing: 5px;
   }
 
-  .projects-title-line {
-    width: 200px;
-    height: 7px;
-    margin-bottom: 42px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .projects-track {
     gap: 18px;
   }
 
+  .project-card {
+    flex-basis: 88%;
+  }
+
   .project-card-content {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 25px 28px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 22px 18px;
   }
 
   .project-description {
     min-height: 0;
   }
+
+  .projects-controls {
+    justify-content: center;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .projects-counter {
+    min-width: 72px;
+    padding: 9px 10px;
+  }
+
+  .projects-arrow {
+    width: 42px;
+    height: 42px;
+  }
 }
 
-/* Reduced Motion */
+/* ==============================
+   Reduced Motion
+============================== */
+
 @media (prefers-reduced-motion: reduce) {
+  .projects-title,
+  .projects-track,
   .project-card,
   .project-card-image > img,
-  .project-view-link span,
-  .projects-title {
+  .projects-arrow {
     transition: none;
   }
 
-  .project-card:hover {
+  .project-card:hover,
+  .projects-arrow:hover:not(:disabled) {
     transform: none;
   }
-}
-
-/* Projects Title Hover Effect */
-.projects-container:has(.project-card:hover) .projects-title {
-  transform: scale(1.02);
-  color: #ffffff;
-  text-shadow: 0 0 16px rgb(255 255 255 / 30%);
 }
