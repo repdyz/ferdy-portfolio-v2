@@ -89,6 +89,7 @@ const projects = [
 const carouselProjects = [...projects, ...projects, ...projects]
 
 function Projects() {
+  const [hoveredProject, setHoveredProject] = useState(null)
   const [activeProject, setActiveProject] = useState(null)
   const [activeImage, setActiveImage] = useState(0)
   const [activeIndex, setActiveIndex] = useState(projects.length)
@@ -206,9 +207,10 @@ function Projects() {
   }
 
   const displayedIndex =
-    ((activeIndex - projects.length) % projects.length +
-      projects.length) %
-      projects.length +
+    hoveredProject ??
+  (((activeIndex - projects.length) % projects.length +
+    projects.length) %
+    projects.length) +
     1
 
   return (
@@ -237,6 +239,8 @@ function Projects() {
                 key={`${index}-${project.id}`}
                 type="button"
                 className="project-card"
+                onMouseEnter={() => setHoveredProject(project.id)}
+                onMouseLeave={() => setHoveredProject(null)}
                 onClick={() => handleCardClick(project)}
                 aria-label={`View ${project.title} details`}
               >
