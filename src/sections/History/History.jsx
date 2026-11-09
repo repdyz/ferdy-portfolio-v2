@@ -1,15 +1,15 @@
 import "./History.css";
 import equnixLogo from "../../assets/equnixLogo2 (1).png";
 import uswahLogo from "../../assets/logoUswahBaru (1).png";
-import vascommLogo from "../../assets/vascomLogoOnly (2).png";
+import idsLogo from "../../assets/idsLogo1.png";
 import universityLogo from "../../assets/uaiLogoBaru (1).png";
 
 const workExperiences = [
   {
     role: "Application Support (Contract)",
-    company: "PT. Vascomm Solusi Teknologi",
-    date: "Nov 2026 – Nov 2027",
-    logo: vascommLogo,
+    company: "IDSurvey",
+    date: "Nov 2026 – Present",
+    logo: idsLogo,
     description:
       "Handle support tickets, respond to user requests, and coordinate with relevant technical teams to ensure timely issue resolution and service continuity.",
   },
